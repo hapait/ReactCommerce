@@ -19,26 +19,6 @@ export default {
             brand: 'One Man',
             rating:  2.5,
             numReviews: 10
-        },
-        {
-            _id: '003',
-            name: 'Best Pants',
-            category: 'Pants',
-            image: '/images/s1.png',
-            price: 90,
-            brand: 'Reymonds',
-            rating:  4.8,
-            numReviews: 10
-        },
-        {
-            _id: '004',
-            name: 'Best Pants',
-            category: 'Pants',
-            image: '/images/s1.png',
-            price: 90,
-            brand: 'Reymonds',
-            rating:  4.8,
-            numReviews: 10
         }
     ]
 }
