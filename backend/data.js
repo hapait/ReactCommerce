@@ -8,7 +8,8 @@ export default {
             price: 60,
             brand: 'Nike',
             rating:  4.5,
-            numReviews: 10
+            numReviews: 10,
+            countInStock: 6
         },
         {
             _id: '001',
@@ -18,7 +19,8 @@ export default {
             price: 60,
             brand: 'Nike',
             rating:  4.5,
-            numReviews: 10
+            numReviews: 10,
+            countInStock: 0
         },
         {
             _id: '002',
@@ -28,7 +30,8 @@ export default {
             price: 70,
             brand: 'One Man',
             rating:  2.5,
-            numReviews: 10
+            numReviews: 10,
+            countInStock: 2
         },
         {
             _id: '003',
@@ -38,7 +41,8 @@ export default {
             price: 90,
             brand: 'Reymonds',
             rating:  4.8,
-            numReviews: 10
+            numReviews: 10,
+            countInStock: 4
         },
         {
             _id: '004',
@@ -48,7 +52,8 @@ export default {
             price: 90,
             brand: 'Reymonds',
             rating:  4.8,
-            numReviews: 10
+            numReviews: 10,
+            countInStock: 3
         }
     ]
 }
