@@ -4,6 +4,7 @@ import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen';
 import './App.css';
 import CartScreen from './screens/CartScreen';
+import SigningScreen from './screens/SigningScreen';
 
 function App() {
   const openMenu = () => {
@@ -22,7 +23,7 @@ function App() {
           </div>
           <div className="header-links">
             <a href="cart.html">Cart</a>
-            <a href="signin.html">Sign in</a>
+            <Link to="/signing">Sign in</Link>
           </div>
         </header>
         <aside className="sidebar">
@@ -39,6 +40,7 @@ function App() {
         </aside>
         <main className="main">
           <div className="content">
+            <Route path="/signing" component={SigningScreen}/>
             <Route path="/product/:id" component={ProductScreen}/>
             <Route path="/cart/:id?" component={CartScreen} />
             <Route path="/" exact={true} component={HomeScreen}/>

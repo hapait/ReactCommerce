@@ -1,12 +1,29 @@
 import express from 'express';
-import user from '../models/userModel';
+import User from '../models/userModel';
 
 const router = express.Router();
 
+router.post('/signin', async (req, res) => {
+    const signinUser = await User.findOne({
+        email: req.body.email,
+        password: req.body.password
+    });
+    if(signinUser){
+        res.send({
+            _id: signinUser.id,
+            name: signinUser.name,
+            email: signinUser.email,
+            isAdmin: signinUser.isAdmin,
+            token: getToken(user)//confusion
+        });
+    }else{
+        res.status(401).send({msg: 'Invalid Email or password'});
+    }
+});
+
 router.get("/createadmin", async(req, res) => {
     try {
-        console.log("creating admin user ");
-        const us = new user(
+        const us = new User(
             {
                 name: 'shafa',
                 email: 'a@b.com',
@@ -14,11 +31,9 @@ router.get("/createadmin", async(req, res) => {
                 isAdmin: true
             }
         );
-        console.log("name: "+ us.name);
         const newUser = await us.save();
         res.send(newUser);
     } catch (error) {
-        console.log("create adming failed###");
         res.send({msg: error.message});
     }
 });
