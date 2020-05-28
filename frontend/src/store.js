@@ -5,7 +5,7 @@ import {cartReducer} from './reducers/cartReducers';
 import Cookie from "js-cookie";
 
 const cartItems = Cookie.getJSON("cartItems") || [];
-
+//cookies not working
 const initialState = {cart:{cartItems}};
 const reducer = combineReducers({
     productList: productListReducer,
